@@ -1,0 +1,26 @@
+{
+  "name": "openaccount-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@passwordless-id/webauthn": "^1.6.1",
+    "@peculiar/asn1-ecc": "^2.3.8",
+    "@peculiar/asn1-schema": "^2.3.8",
+    "@soulwallet/sdk": "^0.3.6",
+    "ethers": "^6.13.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.2"
+  }
+}
