@@ -23,9 +23,6 @@ function useAuthWindow() {
     const [authResult, setAuthResult] = (0, react_1.useState)(null);
     (0, react_1.useEffect)(() => {
         const handleMessage = (event) => {
-            if (event.origin !== window.location.origin) {
-                return;
-            }
             if (event.data.type === 'AUTH_RESULT') {
                 setAuthResult(event.data.payload);
             }

@@ -10,9 +10,6 @@ export function useAuthWindow() {
 
   useEffect(() => {
     const handleMessage = (event: { origin: string; data: { type: string; payload: SetStateAction<null>; }; }) => {
-      if (event.origin !== window.location.origin) {
-        return;
-      }
 
       if (event.data.type === 'AUTH_RESULT') {
         setAuthResult(event.data.payload);
