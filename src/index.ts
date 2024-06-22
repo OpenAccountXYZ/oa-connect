@@ -1,6 +1,8 @@
-import { verifySignature, useAuthWindow, } from "./useAuthWindow";
+import { verifySignature, useAuthWindow} from "./useAuthWindow";
+import AuthButton from './AuthButton';
 
-export default {
-  useAuthWindow,
-  verifySignature
+export {
+  AuthButton,
+  verifySignature,
+  useAuthWindow
 }

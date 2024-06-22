@@ -1,9 +1,9 @@
 {
   "name": "openaccount-connect",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nextui-org/react": "^2.4.2",
     "@passwordless-id/webauthn": "^1.6.1",
     "@peculiar/asn1-ecc": "^2.3.8",
     "@peculiar/asn1-schema": "^2.3.8",

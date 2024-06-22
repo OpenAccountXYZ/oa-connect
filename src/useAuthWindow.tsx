@@ -4,6 +4,45 @@ import { ECDSASigValue } from "@peculiar/asn1-ecc";
 import { AsnParser } from "@peculiar/asn1-schema";
 import { Base64Url, SoulWallet } from "@soulwallet/sdk";
 import { Contract, JsonRpcProvider, hashMessage, keccak256 } from "ethers";
+import { Button } from '@nextui-org/react';
+import React from 'react';
+
+export interface AuthButtonProps {
+  challenge: string;
+}
+
+export const AuthButton: React.FC<AuthButtonProps> = ({ challenge }) => {
+
+  const openAuthWindow = (challenge: string) => {
+
+    let base_url = 'https://account.test.oa.xyz'
+    let callback_origin = window.location.origin;
+  
+    let url = base_url + '?callback_origin=' + callback_origin + "&challenge=" + challenge;
+  
+    const windowWidth = 500;
+    const windowHeight = 500;
+    const windowLeft = (window.outerWidth / 2) + window.screenX - (windowWidth / 2);
+    const windowTop = (window.outerHeight / 2) + window.screenY - (windowHeight / 2);
+  
+    const authWindow = window.open(
+      url,
+      'AuthWindow',
+      `width=${windowWidth},height=${windowHeight},left=${windowLeft},top=${windowTop}`
+    );
+  
+    if (authWindow) {
+      authWindow.focus();
+    }
+  };
+  return (
+    
+    <Button color="primary" onClick={() => openAuthWindow(challenge)}>Open Auth Window</Button>
+    
+  )
+};
+
+
 
 export function useAuthWindow() {
   const [authResult, setAuthResult] = useState(null);

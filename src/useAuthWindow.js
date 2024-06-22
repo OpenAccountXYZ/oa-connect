@@ -8,6 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.uint8ArrayToHexString = void 0;
 exports.useAuthWindow = useAuthWindow;
@@ -19,6 +22,24 @@ const asn1_ecc_1 = require("@peculiar/asn1-ecc");
 const asn1_schema_1 = require("@peculiar/asn1-schema");
 const sdk_1 = require("@soulwallet/sdk");
 const ethers_1 = require("ethers");
+const react_2 = require("@nextui-org/react");
+const react_3 = __importDefault(require("react"));
+const AuthButton = ({ challenge }) => {
+    const openAuthWindow = (challenge) => {
+        let base_url = 'https://account.test.oa.xyz';
+        let callback_origin = window.location.origin;
+        let url = base_url + '?callback_origin=' + callback_origin + "&challenge=" + challenge;
+        const windowWidth = 500;
+        const windowHeight = 500;
+        const windowLeft = (window.outerWidth / 2) + window.screenX - (windowWidth / 2);
+        const windowTop = (window.outerHeight / 2) + window.screenY - (windowHeight / 2);
+        const authWindow = window.open(url, 'AuthWindow', `width=${windowWidth},height=${windowHeight},left=${windowLeft},top=${windowTop}`);
+        if (authWindow) {
+            authWindow.focus();
+        }
+    };
+    return (react_3.default.createElement(react_2.Button, { color: "primary", onClick: () => openAuthWindow(challenge) }, "Open Auth Window"));
+};
 function useAuthWindow() {
     const [authResult, setAuthResult] = (0, react_1.useState)(null);
     (0, react_1.useEffect)(() => {
