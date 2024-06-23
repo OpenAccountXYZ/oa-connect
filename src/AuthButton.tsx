@@ -54,6 +54,7 @@ const AuthButton: React.FC<AuthButtonProps> = ({ challenge, onClick ,default_url
         />
         <div className="my-auto" style={{
             fontSize: '24px',
+            fontWeight: '500'
           }}>Sign in with OpenAccount</div>
       </div>
     </div>

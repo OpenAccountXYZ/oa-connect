@@ -33,6 +33,7 @@ var AuthButton = function (_a) {
                 }, src: "https://account.test.oa.xyz/_next/image?url=%2Ficon.png&w=64&q=75", className: "shrink-0 aspect-square " }),
             react_1.default.createElement("div", { className: "my-auto", style: {
                     fontSize: '24px',
+                    fontWeight: '500'
                 } }, "Sign in with OpenAccount"))));
 };
 exports.default = AuthButton;
