@@ -21,14 +21,15 @@ var AuthButton = function (_a) {
             authWindow.focus();
         }
     };
-    return (
-    // <Button color="primary" onClick={() => { openAuthWindow(challenge); if (onClick) onClick(); }}>
-    //   Open Auth Window
-    // </Button>
-    react_1.default.createElement("div", { onClick: function () { return openAuthWindow(challenge); }, className: "flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 md:w-[579px] max-md:px-5" },
+    return (react_1.default.createElement("div", { onClick: function () { return openAuthWindow(challenge); }, style: {
+            width: ' 579px',
+            borderRadius: '0.5rem',
+        }, className: "flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 w-[579px] max-md:px-5" },
         react_1.default.createElement("div", { className: "flex gap-3" },
-            react_1.default.createElement("div", { className: "flex flex-col justify-center text-3xl font-medium leading-5 text-white whitespace-nowrap" },
-                react_1.default.createElement("div", { className: "justify-center items-center leading-[3.25rem] bg-black rounded-2xl h-[52px] w-[52px]" }, "OP")),
-            react_1.default.createElement("div", { className: "my-auto text-2xl leading-7 text-zinc-900" }, "Sign in with OpenAccount"))));
+            react_1.default.createElement("img", { loading: "lazy", style: {
+                    width: '52px',
+                    height: '52px',
+                }, src: "https://account.test.oa.xyz/_next/image?url=%2Ficon.png&w=64&q=75", className: "shrink-0 aspect-square w-[52px]" }),
+            react_1.default.createElement("div", { className: "my-auto" }, "Sign in with OpenAccount"))));
 };
 exports.default = AuthButton;
