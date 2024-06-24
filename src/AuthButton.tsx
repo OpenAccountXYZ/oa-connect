@@ -42,7 +42,7 @@ const AuthButton: React.FC<AuthButtonProps> = ({ challenge, onClick ,default_url
       }}
 
       className="flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5">
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
         <img
           loading="lazy"
           style={{

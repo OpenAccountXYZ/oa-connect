@@ -26,7 +26,7 @@ var AuthButton = function (_a) {
             height: "72px",
             borderRadius: '0.5rem',
         }, className: "flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5" },
-        react_1.default.createElement("div", { className: "flex gap-3" },
+        react_1.default.createElement("div", { className: "flex gap-3 items-center" },
             react_1.default.createElement("img", { loading: "lazy", style: {
                     width: '48px',
                     height: '48px',
