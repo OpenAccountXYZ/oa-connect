@@ -22,18 +22,17 @@ var AuthButton = function (_a) {
         }
     };
     return (react_1.default.createElement("div", { onClick: function () { return openAuthWindow(challenge, default_url); }, style: {
-            width: '500px',
-            height: "72px",
+            width: '300px',
+            height: "50px",
             borderRadius: '0.5rem',
-        }, className: "flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5" },
+        }, className: "flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5 border-2 authButtonHoverEffect" },
         react_1.default.createElement("div", { className: "flex gap-3 items-center" },
             react_1.default.createElement("img", { loading: "lazy", style: {
-                    width: '48px',
-                    height: '48px',
+                    width: '28px',
+                    height: '28px',
                 }, src: "https://account.test.oa.xyz/_next/image?url=%2Ficon.png&w=64&q=75", className: "shrink-0 aspect-square " }),
             react_1.default.createElement("div", { className: "my-auto", style: {
-                    fontSize: '24px',
-                    fontWeight: '500'
+                    fontSize: '18px'
                 } }, "Sign in with OpenAccount"))));
 };
 exports.default = AuthButton;

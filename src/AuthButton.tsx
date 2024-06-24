@@ -41,7 +41,7 @@ const AuthButton: React.FC<AuthButtonProps> = ({ challenge, onClick ,default_url
         borderRadius: '0.5rem',
       }}
 
-      className="flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5 hover:bg-gray-500 hover:duration-200 border-2">
+      className="flex cursor-pointer justify-center items-center px-3 py-2.5 text-center rounded-lg border border-solid border-zinc-300 max-md:px-5 border-2 authButtonHoverEffect">
       <div className="flex gap-3 items-center">
         <img
           loading="lazy"
