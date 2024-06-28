@@ -103,12 +103,12 @@ function useAuthWindow() {
 function OAFullChallengeToString(challenge) {
     return "".concat(challenge.origin, " wants you to sign in with your Ethereum account:\n").concat(challenge.account, "\n\n").concat(challenge.statement, "\n\nVersion: ").concat(challenge.version, "\nURI: ").concat(challenge.uri, "\nChallenge: ").concat(challenge.challenge, "\nRequest ID: ").concat(challenge.requestID, "\nChain ID: ").concat(challenge.chainID, "\nIssue Time: ").concat(challenge.issueTime, "\nNot Before: ").concat(challenge.notBefore, "\nExpire Time: ").concat(challenge.expireTime, "\n");
 }
-var RPC_URL = "https://sepolia.optimism.io";
-var BUNDLER_URL = "https://api.pimlico.io/v2/optimism-sepolia/rpc?apikey=da8c37e8-9ccc-4928-ab88-615b7de5c088";
-var soulWalletFactory = "0xF78Ae187CED0Ca5Fb98100d3F0EAB7a6461d6fC6";
-var defaultCallbackHandler = "0x880c6eb80583795625935B08AA28EB37F16732C7";
-var socialRecoveryModule = "0x3Cc36538cf53A13AF5C28BB693091e23CF5BB567";
-var SoulWalletDefaultValidator = "0x82621ac52648b738fEdd381a3678851933505762";
+var RPC_URL = "https://sepolia.base.org";
+var BUNDLER_URL = "https://api.pimlico.io/v2/base-sepolia/rpc?apikey=da8c37e8-9ccc-4928-ab88-615b7de5c088";
+var soulWalletFactory = "0x7Ac471845A645F9930Db330eae6D68814e248901";
+var defaultCallbackHandler = "0xB610e798A3C4282C8D53A3E080ae6b05308D9215";
+var socialRecoveryModule = "0x4ecb183D2433Cc603b16dDe8D441540E7760beF9";
+var SoulWalletDefaultValidator = "0xEa26efD37384870C4017FAE51147A08F90b08fd9";
 var soulWallet = new sdk_1.SoulWallet(RPC_URL, BUNDLER_URL, soulWalletFactory, defaultCallbackHandler, socialRecoveryModule);
 function HashOAFullChallenge(challenge) {
     return __awaiter(this, void 0, void 0, function () {
